@@ -6,7 +6,6 @@ tags:
 categories:
 ---
 
-### <font color=#21b2a6>JS中的数组</font>
 #### 关于数组的一些认识
 1. 使用构造器函数创建数组时:
 ```javascript

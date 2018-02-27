@@ -1,12 +1,11 @@
 ---
-title: JavaScript 里的面向对象
+title: JavaScript 创建对象的几种常见的方式
 date: 2018-02-27 15:52:37
 tags: 
     - JavaScript
 categories:
 ---
 
-### <font color=#21b2a6>JavaScript 创建对象的几种常见的方式</font>
 #### 1. 原始方式：
 * 对象字面量方式
 ```javascript

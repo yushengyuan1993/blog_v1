@@ -114,3 +114,7 @@ search:
   field: post
   format: html
   limit: 10000
+
+# 使用swiftype站内搜索
+swift_search:
+enable:  true

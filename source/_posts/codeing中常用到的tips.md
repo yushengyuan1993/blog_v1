@@ -8,8 +8,6 @@ tags:
 categories:
 ---
 
-### <font color=#21b2a6>总结（记录）一些codeing过程中用到的tips</font>
-
 - <a href="#getKey">1. 获取json的`key`值</a>
 - <a href="#input">2. JS实时监听文本域的变化</a>
 - <a href="#checkType">3. JavaScript类型检验</a>
