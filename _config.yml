@@ -67,7 +67,7 @@ tag_map:
   HTML5: HTML5
   CSS: CSS
   CSS3: CSS3
-  JS: JS
+  JavaScript: JavaScript
   ES6: ES6
   DOM: DOM
   BOM: BOM
@@ -76,6 +76,7 @@ tag_map:
   GITHUB: GITHUB
   nginx: nginx
   linux: linux
+  other: other
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
