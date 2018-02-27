@@ -70,7 +70,7 @@ tag_map:
   JS: JS
   ES6: ES6
   DOM: DOM
-  DOM: DOM
+  BOM: BOM
   VUE: VUE
   GIT: GIT
   GITHUB: GITHUB
@@ -98,7 +98,7 @@ theme: anatole
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/yushengyuan1993/blog
+  repo: git@github.com:yushengyuan1993/blog.git
   branch: master
 
 archive_generator:
