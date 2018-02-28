@@ -9,7 +9,7 @@ categories:
 
 实际上，JSON.stringify()除了要序列化JavaScript对象外，还可以接受另外两个参数，这两个参数用于指定以不同的方式序列化JavaScript对象。**第一个**参数是个过滤器，可以使一个数组，也可以是个函数；**第二个**参数是一个选项，表示是否在JSON字符串中保留缩进。单独或组合使用者两个参数，可以更全面深入地控制JSON的序列化。
 #### 1. 过滤器（第一个参数）
-- 数组
+1.数组
 ```JavaScript
 var hero = {
     "name": "MasterYi",
@@ -22,7 +22,7 @@ var hero = {
 var jsonTxt = JSON.stringify(hero, ["name", "type"]);
 jsonTxt --> "{"name":"MasterYi","type":"Warrior"}"
 ```
-- 函数
+2.函数
 ```JavaScript
 var jsonTxt = JSON.stringify(hero, function(k, v){
     switch(k){
@@ -59,4 +59,4 @@ jsonTxt2 -->
     "type": "Warrior"
 }"
 ```
-*聪明的你应该看出来了吧，结果字符串中也插入了换行符，这样一来就提高了可读性。只要传入有效的控制缩进的参数值，结果字符串就会包含换行符。最大缩进空格数为10，大于10会默认转换为10.*
+*如上，结果字符串中也插入了换行符，这样一来就提高了可读性。只要传入有效的控制缩进的参数值，结果字符串就会包含换行符。最大缩进空格数为10，大于10会默认转换为10.*

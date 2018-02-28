@@ -693,3 +693,18 @@ a.btn {
     display: grid;
   }
 }
+
+body::-webkit-scrollbar, #search_shop::-webkit-scrollbar{
+  width: 8px;
+  height: 16px;
+  background-color: #f5f5f5;
+}
+body::-webkit-scrollbar-track, #search_shop::-webkit-scrollbar-track{
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+body::-webkit-scrollbar-thumb, #search_shop::-webkit-scrollbar-thumb{
+  height: 8px;
+  border-radius: 8px;
+  background-color: #ccc;
+}
