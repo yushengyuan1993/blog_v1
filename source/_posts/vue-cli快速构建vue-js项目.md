@@ -84,3 +84,5 @@ $ npm run dev
 - `test/e2e`：e2e测试相关文件。
 
 - `index.html`：基于vue.js的SPA单页应用的入口HTML模板，在开发、构建过程中，webpack将生成很多资源文件，文件之间的URL会被自动的注入到该index.html中。
+
+- `package.json`：npm包源文件，包含所有的构建依赖和构建命令。
