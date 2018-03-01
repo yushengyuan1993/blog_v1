@@ -117,4 +117,4 @@ search:
 
 # 使用swiftype站内搜索
 swift_search:
-enable:  true
+enable: true
