@@ -8,12 +8,18 @@ tags:
 categories:
 ---
 
+- <a href="#install">安装</a>
+- <a href="#usage">使用</a>
+- <a href="#babelrc">创建.babelrc文件</a>
+- <a href="#polyfill">Babel-Polyfill</a>
+- <a href="#register">Babel-Register</a>
+
 &emsp;首先，为什么会写这样一篇文章呢？在进入公司几个月后，写业务代码都是使用es5语法，es6，于是想着使用Babel来构建一下。这样既可以愉快的使用ES6了，还能舒心的写代码，何乐而不为。
 
 - Babel的使用是基于Node.js环境的，所以必须先安装Node。
 - 我们将采用通过安装babel-cli的方式来使用babel。
 
-#### 1.安装
+#### <a name="install">1. 安装</a>
 &emsp;虽然你可以在你的机器上全局安装`Babel CLI`, 但根据单个项目进行本地安装会更好一些。这样做有两个主要的原因：
 * 同一机器上的不同的项目可以依赖不同版本的 Babel, 这允许你一次更新一个项目。
 * 这意味着在你的工作环境中没有隐含的依赖项。它将使你的项目更方便移植、更易于安装。
@@ -77,7 +83,7 @@ npm install --save-dev babel-cli
 }
 ```
 
-#### 2. 使用
+#### <a name="usage">2. 使用</a>
 - 我们将把我们的指令放在本地版本的 npm 脚本中，而不是直接通过命令行来运行 Babel.
 
 > 简单的在你的 package.json 中添加一个 "scripts" 属性并将 babel 命令放在它的 build 属性中：
@@ -102,6 +108,79 @@ npm run build
 *这会按照和之前一样的方式来运行 Babel 并将输出放在 lib 目录下，唯一不同在于我们现在使用了一个本地拷贝。*
 > 值得注意的是在babel的build命令是可以在build属性中自行配置的，上面是把src目录下的脚本打包到lib目录中，你也可以打包单个文件...
 
+#### <a name="babelrc">3. 创建.babelrc配置文件</a>
 
+- 虽然已经配置好了 Babel ，但并没有让它真正生效。在项目的根目录中创建一个 .babelrc 文件并启用一些插件。 [详看](https://babeljs.cn/docs/setup/#installation)
+
+首先，你可以使用转换 ES2015+ 的 env preset：
+```bash
+npm install babel-preset-env --save-dev
+```
+为了让 preset 生效，你需要像下面这样定义你的 .babelrc 文件：
+```json
+{
+  "presets": ["env"],
+  "plugins": []
+}
+```
+> .babelrc配置文件非常丰富：
+
+```bash
+# ES2015转码规则
+$ npm install --save-dev babel-preset-es2015
+
+# react转码规则
+$ npm install --save-dev babel-preset-react
+
+# ES7不同阶段语法提案的转码规则（共有4个阶段），选装一个
+$ npm install --save-dev babel-preset-stage-0
+$ npm install --save-dev babel-preset-stage-1
+$ npm install --save-dev babel-preset-stage-2
+$ npm install --save-dev babel-preset-stage-3
+```
+最后，我们的 .babelrc 文件可以长这个样：
+``` json
+{
+  "presets": [
+    "es2015",
+    "react",
+    "stage-2"
+  ],
+  "plugins": []
+}
+```
+
+#### <a name="polyfill">4. Babel-Polyfill</a>
+
+Babel默认只转换新的JavaScript句法（syntax），而不转换新的API，比如Iterator、Generator、Set、Maps、Proxy、Reflect、Symbol、Promise等全局对象，以及一些定义在全局对象上的方法（比如`Object.assign`）都不会转码。
+
+举例来说，ES6在Array对象上新增了`Array.from`方法。Babel就不会转码这个方法。如果想让这个方法运行，必须使用babel-polyfill，为当前环境提供一个垫片。
+
+安装命令如下：
+```bash
+npm install --save babel-polyfill
+```
+然后，在脚本头部，加入如下一行代码：
+```js
+import 'babel-polyfill';
+// 或者
+require('babel-polyfill');
+```
+
+#### <a name="register">5. Babel-Register</a>
+
+babel-register模块改写require命令，为它加上一个钩子。此后，每当使用require加载.js、.jsx、.es和.es6后缀名的文件，就会先用Babel进行转码。
+```bash
+npm install --save-dev babel-register
+```
+使用时，必须首先加载babel-register：
+```js
+import("babel-register");
+import("./index.js");
+```
+然后，就不需要手动对index.js转码了。
+> 需要注意的是，babel-register只会对require命令加载的文件转码，而不会对当前文件转码。另外，由于它是实时转码，所以只适合在`开发环境`使用。
+
+#### `后记`：虽然实际项目上的配置根据实际情况有所不同，但是基本的东西就是这个样子了，以后有类似需求就可以根据文档来进行了，非常方便。
 ---
-> [参考文档](https://babeljs.cn/)
+> 参考文档： [babeljs.cn](https://babeljs.cn/) / [ruanyifeng.com](http://www.ruanyifeng.com/blog/2016/01/babel.html?20170213113809)
