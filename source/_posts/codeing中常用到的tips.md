@@ -1,4 +1,5 @@
 ---
+id: 0809003
 title: codeing中常用到的tips
 date: 2079-01-01 00:050:00
 tags: 

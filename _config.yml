@@ -14,7 +14,7 @@ timezone: Asia/Shanghai
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://111.231.78.140
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :year/:month/:day/:id/
 permalink_defaults:
 
 # Directory
@@ -103,7 +103,7 @@ deploy:
   branch: master
 
 archive_generator:
-  per_page: 8  
+  per_page: 10  
   yearly: false
   monthly: false
   daily: false
