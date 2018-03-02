@@ -150,6 +150,8 @@ a:hover, a:active {
   float: right;
   padding-top: 12px;
   padding-right: 20px;
+  float: right;
+  margin-left: 10px;
 }
 .page-top .information .avatar {
   float: right;
@@ -166,7 +168,7 @@ a:hover, a:active {
 }
 .page-top .information .back_btn li {
   display: initial;
-  padding-right: 40px;
+  padding-right: 20px;
 }
 
 .sidebar {
@@ -247,7 +249,7 @@ a:hover, a:active {
   color: #5f5f5f;
 }
 .post .post-title h3 {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
   line-height: 1;
   font-weight: 600;
@@ -335,7 +337,7 @@ a:hover, a:active {
 .pagination {
   margin: 30px;
   padding: 0px 0 56px 0;
-  border-bottom: 1px solid #f2f2f2;
+  /* border-bottom: 1px solid #f2f2f2; */
 }
 .pagination ul {
   list-style: none;
@@ -405,7 +407,6 @@ a:hover, a:active {
 .archive {
   width: 100%;
 }
-
 .list-with-title {
   font-size: 14px;
   margin: 30px;
@@ -433,15 +434,22 @@ a:hover, a:active {
 }
 .list-with-title .listing .listing-post a {
   color: #8F8F8F;
+  display: inline-block;
+  -webkit-transition: padding-left 0.35s;
+  -moz-transition: padding-left 0.35s;
+  -ms-transition: padding-left 0.35s;
+  transition: padding-left 0.35s;
 }
 .list-with-title .listing .listing-post a:hover {
   color: #4786D6;
+  padding-left: 1em;
 }
 
 /* share */
 .share {
   margin: 0px 30px;
-  display: inline-flex;
+  /* display: inline-flex; */
+  display: none;
 }
 
 .evernote {
@@ -679,7 +687,7 @@ a.btn {
   }
 
   .content {
-    margin-top: 420px;
+    margin-top: 350px;
     width: 100%;
     z-index: 2;
     position: absolute;
@@ -690,7 +698,16 @@ a.btn {
   }
 
   .share {
-    display: grid;
+    /* display: grid; */
+    display: none;
+  }
+
+  .page-top .nav {
+    padding-right: 0;
+    padding-left: 20px;
+  }
+  .search .widget .st-default-search-input,.search .st-ui-search-input {
+    width: 100px;
   }
 }
 
@@ -706,5 +723,23 @@ body::-webkit-scrollbar-track, #search_shop::-webkit-scrollbar-track{
 body::-webkit-scrollbar-thumb, #search_shop::-webkit-scrollbar-thumb{
   height: 8px;
   border-radius: 8px;
-  background-color: #ccc;
+  background-color: #ddd;
+}
+.fa-chevron-left {
+  padding: 0 20px;
+}
+.search ,.search>.widget {
+  display: inline-block;
+  margin-top: 7.5px;
+  float: right;
+}
+.widget .st-default-search-input,.search .st-ui-search-input {
+  width: 170px;
+  display: inline-block;
+  height: 16px;
+  padding: 7px 11px 7px 28px;
+  border: 1px solid rgba(0,0,0,0.25);
+  color: #3B454F;
+  line-height: 16px;
+  border-radius: 5px;
 }

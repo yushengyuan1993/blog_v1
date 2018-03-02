@@ -14,6 +14,8 @@ weibo:
 instagram: 
 facebook: 
 
+theme: yvshare
+
 # Comment
 duoshuo: 
 disqus: 
@@ -29,3 +31,6 @@ valine:
   placeholder: Just go go # comment box placeholder
 
 livere_uid: MTAyMC8zNDQ3NC8xMTAxMQ==
+
+# 使用swiftype站内搜索
+swiftype: 1-sBczVpQ3oDGvU8L5aH

@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="iysy@foxmail.com"><title>vue-cli快速构建vue.js项目 · yushare</title><meta name="description" content="快速上手
+构建命令
+配置Babel
+
+1. 快速上手本文介绍如何使用vue-cli快速构建vus.js项目，主要用到webpack，以及vue-loader，所以确保你的环境中安装有webpack。
+123456789101112131415# 安装vue-cli脚手架工具$ npm install"><meta name="keywords" content="HTML,CSS,JAVASCRIPT"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><a href="https://www.yvshare.cn"><img src="/images/logo@2x.png" style="width:328px;"></a><div class="description"><p>record life bit by bit.</p></div></div></div><ul class="social-links"><li><a href="https://twitter.com/yushengyuan"><i class="fa fa-twitter"></i></a></li><li><a href="https://github.com/yushengyuan1993"><i class="fa fa-github"></i></a></li></ul><div class="footer"><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Powered by Hexo</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/tags">标签</a></li></div><div class="information"><div class="back_btn"><li><a class="fa fa-chevron-left" onclick="window.history.go(-1)"> </a></li></div><div class="avatar"><img src="/images/favicon.png"></div></div><div class="search"><div class="widget"><input class="st-default-search-input" placeholder="搜索文章" type="text"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>vue-cli快速构建vue.js项目</a></h3></div><div class="post-content"><ul>
+<li><a href="#Quickstart">快速上手</a></li>
+<li><a href="#Commands">构建命令</a></li>
+<li><a href="#Babel">配置Babel</a></li>
+</ul>
+<h4 id="1-快速上手"><a href="#1-快速上手" class="headerlink" title="1. 快速上手"></a><a name="Quickstart">1. 快速上手</a></h4><p>本文介绍如何使用vue-cli快速构建vus.js项目，主要用到<code>webpack</code>，以及<code>vue-loader</code>，所以确保你的环境中安装有webpack。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装vue-cli脚手架工具</span></span><br><span class="line">$ npm install -g vue-cli</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在 my-project 目录中生成一个项目</span></span><br><span class="line"><span class="comment"># 这一步中你还可以选择是否安装vue-router,ESLint,unit tests, e2e tests...</span></span><br><span class="line">$ vue init webpack my-project</span><br><span class="line"></span><br><span class="line"><span class="comment"># 进入到项目</span></span><br><span class="line">$ <span class="built_in">cd</span> my-project</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">$ npm install</span><br><span class="line"></span><br><span class="line"><span class="comment"># 构建并启动项目</span></span><br><span class="line">$ npm run dev</span><br></pre></td></tr></table></figure>
+<p>如果你在 <code>vue init webpack my-project</code> 步骤中选择安装所有的工具，那么我们的项目目录结构应该是这样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── build/                      # webpack config files</span><br><span class="line">│   └── ...</span><br><span class="line">├── config/</span><br><span class="line">│   ├── index.js                # main project config</span><br><span class="line">│   └── ...</span><br><span class="line">├── src/</span><br><span class="line">│   ├── main.js                 # app entry file</span><br><span class="line">│   ├── App.vue                 # main app component</span><br><span class="line">│   ├── components/             # ui components</span><br><span class="line">│   │   └── ...</span><br><span class="line">│   └── assets/                 # module assets (processed by webpack)</span><br><span class="line">│       └── ...</span><br><span class="line">├── static/                     # pure static assets (directly copied)</span><br><span class="line">├── test/</span><br><span class="line">│   └── unit/                   # unit tests</span><br><span class="line">│   │   ├── specs/              # test spec files</span><br><span class="line">│   │   ├── eslintrc            # config file for eslint with extra settings only for unit tests</span><br><span class="line">│   │   ├── index.js            # test build entry file</span><br><span class="line">│   │   ├── jest.conf.js        # Config file when using Jest for unit tests</span><br><span class="line">│   │   └── karma.conf.js       # test runner config file when using Karma for unit tests</span><br><span class="line">│   │   ├── setup.js            # file that runs before Jest runs your unit tests</span><br><span class="line">│   └── e2e/                    # e2e tests</span><br><span class="line">│   │   ├── specs/              # test spec files</span><br><span class="line">│   │   ├── custom-assertions/  # custom assertions for e2e tests</span><br><span class="line">│   │   ├── runner.js           # test runner script</span><br><span class="line">│   │   └── nightwatch.conf.js  # test runner config file</span><br><span class="line">├── .babelrc                    # babel config</span><br><span class="line">├── .editorconfig               # indentation, spaces/tabs and similar settings for your editor</span><br><span class="line">├── .eslintrc.js                # eslint config</span><br><span class="line">├── .eslintignore               # eslint ignore rules</span><br><span class="line">├── .gitignore                  # sensible defaults for gitignore</span><br><span class="line">├── .postcssrc.js               # postcss config</span><br><span class="line">├── index.html                  # index.html template</span><br><span class="line">├── package.json                # build scripts and dependencies</span><br><span class="line">└── README.md                   # Default README file</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>目录/文件介绍：</p>
+</blockquote>
+<ul>
+<li><p><code>build/</code>：该目录保存的是开发和生产环境中的webpack配置，一般情况下是不需要进行修改的；当需要自定义webpack配置时，可以从webpack.base.conf.js开始研究。</p>
+</li>
+<li><p><code>config/index.js</code>：这是项目构建时需要的一些最常用到的配置文件。</p>
+</li>
+<li><p><code>src/</code>：这里存放的就是我们的业务代码了，我们可以根据项目需要自行配置。</p>
+</li>
+<li><p><code>static/</code>：在这里，我们可以存放一些我们不希望webpack来处理的静态资源文件，在使用webpack来构建时，这里的文件将会直接复制到构建后的资源目录下。</p>
+</li>
+<li><p><code>test/unit</code>：单元测试相关文件。</p>
+</li>
+<li><p><code>test/e2e</code>：e2e测试相关文件。</p>
+</li>
+<li><p><code>index.html</code>：基于vue.js的SPA单页应用的入口HTML模板，在开发、构建过程中，webpack将生成很多资源文件，文件之间的URL会被自动的注入到该index.html中。</p>
+</li>
+<li><p><code>package.json</code>：npm包源文件，包含所有的构建依赖和构建命令。</p>
+</li>
+</ul>
+<h4 id="2-构建命令"><a href="#2-构建命令" class="headerlink" title="2. 构建命令"></a><a name="Commands">2. 构建命令</a></h4><p><strong>所有的构建命令都是通过<code>npm</code>脚本执行的，见<code>package.json//scripts</code>。<strong></strong></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+<p>在本地开发环境启动一个node.js服务器。</p>
+<ul>
+<li><code>webpack</code> + <code>vue-loader</code> 作用于vue的单文件组件</li>
+<li>状态保存，热加载</li>
+<li>使用<code>ESLint</code>检查js</li>
+<li>生成资源文件的sourcemap</li>
+<li>……</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+<p>在生产环境中构建资源</p>
+<ul>
+<li>使用<code>UglifyJS v3</code>压缩JavaScript</li>
+<li>使用<code>html-minifier</code>压缩HTML</li>
+<li>使用<code>cssnano</code>将所有组件的CSS提取到一个文件中</li>
+<li>使用版本哈希编译所有的静态文件，以实现资源的持久缓存。为所有的资源自定生成合适的URL，最后注入到<code>index.html</code>中，完成整个工程的构建。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run unit</span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用Jest在JSDOM中运行单元测试</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run lint</span><br></pre></td></tr></table></figure>
+<ul>
+<li>运行ESLint并报告任何linting错误。</li>
+</ul>
+<blockquote>
+<p>更多构建命令请查阅相关资料</p>
+</blockquote>
+<h4 id="3-配置Babel"><a href="#3-配置Babel" class="headerlink" title="3. 配置Babel"></a><a name="Babel">3. 配置Babel</a></h4><blockquote>
+<p>详见我的<a href="/2018/03/01/0809007/">另外一篇文章</a></p>
+</blockquote>
+<p><code>至此，通过vue-cli构建vue工程的基本过程已经结束，查看更多详细配置，</code><a href="https://vuejs-templates.github.io/webpack/" target="_blank" rel="noopener">请转</a></p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-03-01</span><i class="fa fa-tag"></i><a class="tag" href="/tags/JavaScript/" title="JavaScript">JavaScript </a><a class="tag" href="/tags/vue-js/" title="vue.js">vue.js </a><a class="tag" href="/tags/webpack/" title="webpack">webpack </a><a class="tag" href="/tags/es6/" title="es6">es6 </a></div></div></div></div><div class="share"><div class="evernote"><a class="fa fa-bookmark" href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank"></a></div><div class="weibo"><a class="fa fa-weibo" href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a></div><div class="twitter"><a class="fa fa-twitter" href="http://twitter.com/home?status=,http://111.231.78.140/2018/03/01/0809009/,yushare,vue-cli快速构建vue.js项目,;"></a></div></div><div id="lv-container" data-id="city" data-uid="MTAyMC8zNDQ3NC8xMTAxMQ=="></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a class="btn" role="navigation" href="/2018/03/02/0809010/" title="小窥Node.js服务端框架Express">上一篇</a></li><li class="next pagbuttons"><a class="btn" role="navigation" href="/2018/03/01/0809007/" title="记一次在公司中配置Babel的经历">下一篇</a></li></ul></div></div></div></div></div><script src="https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js"></script><script src="https://cdn.bootcss.com/jquery-migrate/1.2.1/jquery-migrate.min.js"></script><script src="https://cdn.bootcss.com/jquery.appear/0.3.3/jquery.appear.min.js"></script><script src="/js/livere.js"></script></body></html>
