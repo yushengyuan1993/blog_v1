@@ -9,6 +9,7 @@ tags:
 categories:
 ---
 - <a href="#Quickstart">快速上手</a>
+- <a href="#Commands">构建命令</a>
 
 #### <a name="Quickstart">1. 快速上手</a>
 本文介绍如何使用vue-cli快速构建vus.js项目，主要用到`webpack`，以及`vue-loader`，所以确保你的环境中安装有webpack。
@@ -69,7 +70,7 @@ $ npm run dev
 ├── package.json                # build scripts and dependencies
 └── README.md                   # Default README file
 ```
-> 目录介绍：
+> 目录/文件介绍：
 
 - `build/`：该目录保存的是开发和生产环境中的webpack配置，一般情况下是不需要进行修改的；当需要自定义webpack配置时，可以从webpack.base.conf.js开始研究。
 
@@ -86,3 +87,8 @@ $ npm run dev
 - `index.html`：基于vue.js的SPA单页应用的入口HTML模板，在开发、构建过程中，webpack将生成很多资源文件，文件之间的URL会被自动的注入到该index.html中。
 
 - `package.json`：npm包源文件，包含所有的构建依赖和构建命令。
+
+#### <a name="Commands">2. 构建命令</a>
+
+> 所有的构建命令都是通过`npm`脚本执行的，见`package.json//scripts`。
+
