@@ -1,4 +1,5 @@
 ---
+id: 0809009
 title: vue-cli快速构建vue.js项目
 date: 2018-03-01 14:59:28
 tags:
@@ -10,6 +11,7 @@ categories:
 ---
 - <a href="#Quickstart">快速上手</a>
 - <a href="#Commands">构建命令</a>
+- <a href="#Babel">配置Babel</a>
 
 #### <a name="Quickstart">1. 快速上手</a>
 本文介绍如何使用vue-cli快速构建vus.js项目，主要用到`webpack`，以及`vue-loader`，所以确保你的环境中安装有webpack。
@@ -90,5 +92,39 @@ $ npm run dev
 
 #### <a name="Commands">2. 构建命令</a>
 
-> 所有的构建命令都是通过`npm`脚本执行的，见`package.json//scripts`。
+<strong>所有的构建命令都是通过`npm`脚本执行的，见`package.json//scripts`。<strong>
 
+```
+npm run dev
+```
+在本地开发环境启动一个node.js服务器。
+- `webpack` + `vue-loader` 作用于vue的单文件组件
+- 状态保存，热加载
+- 使用`ESLint`检查js
+- 生成资源文件的sourcemap
+- ......
+
+```
+npm run build
+```
+在生产环境中构建资源
+- 使用`UglifyJS v3`压缩JavaScript
+- 使用`html-minifier`压缩HTML
+- 使用`cssnano`将所有组件的CSS提取到一个文件中
+- 使用版本哈希编译所有的静态文件，以实现资源的持久缓存。为所有的资源自定生成合适的URL，最后注入到`index.html`中，完成整个工程的构建。
+
+```
+npm run unit
+```
+- 使用Jest在JSDOM中运行单元测试
+
+```
+npm run lint
+```
+- 运行ESLint并报告任何linting错误。
+
+> 更多构建命令请查阅相关资料
+
+#### <a name="Babel">3. 配置Babel</a>
+
+> 详见我的[另外一篇文章](/2018/03/01/0809007/)
