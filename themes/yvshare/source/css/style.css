@@ -735,4 +735,11 @@ body::-webkit-scrollbar-thumb, #search_shop::-webkit-scrollbar-thumb{
 }
 .widget .st-default-search-input,.search .st-ui-search-input {
   width: 170px;
+  display: inline-block;
+  height: 16px;
+  padding: 7px 11px 7px 28px;
+  border: 1px solid rgba(0,0,0,0.25);
+  color: #3B454F;
+  line-height: 16px;
+  border-radius: 5px;
 }
