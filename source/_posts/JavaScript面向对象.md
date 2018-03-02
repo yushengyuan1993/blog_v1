@@ -1,6 +1,6 @@
 ---
 id: 0809008
-title: JavaScript 创建对象的几种常见的方式
+title: JavaScript面向对象
 date: 2018-02-27 15:52:37
 tags: 
     - JavaScript

@@ -1,6 +1,6 @@
 ---
 id: 0809007
-title: 记一次在公司项目中使用Babel的经历
+title: 记一次在公司中配置Babel的经历
 date: 2018-03-01 09:46:10
 tags:
     - Babel

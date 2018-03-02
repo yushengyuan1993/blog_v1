@@ -1,6 +1,6 @@
 ---
 id: 0809004
-title: HTML5 存储 localStorage 和 sessionStorage
+title: HTML5存储webStorage
 date: 2018-02-27 17:56:48
 tags: 
     - HTML5

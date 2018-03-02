@@ -128,3 +128,5 @@ npm run lint
 #### <a name="Babel">3. 配置Babel</a>
 
 > 详见我的[另外一篇文章](/2018/03/01/0809007/)
+
+`至此，通过vue-cli构建vue工程的基本过程已经结束，查看更多详细配置，`[请转](https://vuejs-templates.github.io/webpack/)
