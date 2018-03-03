@@ -1,0 +1,17 @@
+doctype
+html(lang="zh-CN")
+  head
+    include head
+
+  body
+    include sidebar
+    .main
+      include nav
+
+      block content
+
+    script(src= url_for('https://cdn.bootcss.com/jquery/1.9.0/jquery.min.js'))
+    script(src= url_for('https://cdn.bootcss.com/jquery-migrate/1.2.1/jquery-migrate.min.js'))
+    script(src= url_for('https://cdn.bootcss.com/jquery.appear/0.3.3/jquery.appear.min.js'))
+    //- script(src= url_for('js/jquery.appear.js'))
+    script(src= url_for('js/livere.js'))
