@@ -660,7 +660,9 @@ a.btn {
   text-align: center;
   padding-top: 50px;
 }
-
+.fa-chevron-left {
+  padding: 0 20px;
+}
 @media screen and (max-width: 960px) {
   .sidebar {
     width: 100%;
@@ -707,10 +709,34 @@ a.btn {
     padding-left: 20px;
   }
   .search .widget .st-default-search-input,.search .st-ui-search-input {
-    width: 100px;
+    width: 120px;
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .search .widget .st-default-search-input,.search .st-ui-search-input {
+    width: 190px;
+  }
+  .fa-chevron-left {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 960px) and (min-width: 440px) {
+  .search .widget .st-default-search-input,.search .st-ui-search-input {
+    width: 120px;
+  }
+  .fa-chevron-left {
+    padding: 0 20px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .search .widget .st-default-search-input,.search .st-ui-search-input {
+    width: 76px;
+  }
+  .fa-chevron-left {
+    padding: 0 10px;
+  }
+}
 body::-webkit-scrollbar, #search_shop::-webkit-scrollbar{
   width: 8px;
   height: 16px;
@@ -724,9 +750,6 @@ body::-webkit-scrollbar-thumb, #search_shop::-webkit-scrollbar-thumb{
   height: 8px;
   border-radius: 8px;
   background-color: #dfdfdf;
-}
-.fa-chevron-left {
-  padding: 0 20px;
 }
 .search ,.search>.widget {
   margin-top: 7.5px;
