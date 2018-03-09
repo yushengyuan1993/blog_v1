@@ -1,6 +1,6 @@
 ---
 id: 0809009
-title: vue-cli快速构建vue.js项目
+title: vue-cli 快速构建 vue.js 项目
 date: 2018-03-01 14:59:28
 tags:
     - vue.js

@@ -1,6 +1,6 @@
 ---
 id: 0809003
-title: 在hexo中部署livere评论系统
+title: 在 hexo 中部署 livere 评论系统
 date: 2018-02-24 00:05:00
 tags: 
     - JavaScript

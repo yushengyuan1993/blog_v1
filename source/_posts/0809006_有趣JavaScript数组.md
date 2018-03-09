@@ -1,6 +1,6 @@
 ---
 id: 0809006
-title: 关于javascript数组的一些思考
+title: 有趣的 javascript 数组
 date: 2018-02-27 15:48:26
 tags: 
     - JavaScript

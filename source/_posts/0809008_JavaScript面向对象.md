@@ -1,6 +1,6 @@
 ---
 id: 0809008
-title: JavaScript面向对象
+title: JavaScript 面向对象
 date: 2018-02-27 15:52:37
 tags: 
     - JavaScript

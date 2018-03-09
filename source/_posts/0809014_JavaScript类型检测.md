@@ -1,6 +1,6 @@
 ---
 id: 0809014
-title: JavaScript类型检测
+title: JavaScript 类型检测
 date: 2018-03-05 10:58:37
 tags:
     - JavaScript
