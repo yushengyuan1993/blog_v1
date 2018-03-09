@@ -5,3 +5,5 @@ tags:
     - JavaScript
 categories:
 ---
+
+> 首先，`call`，`apply`，`bind` 他们是为了解决哪些问题的呢？
