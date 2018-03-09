@@ -232,7 +232,7 @@ a:hover, a:active {
 
 .post {
   background-color: #FFF;
-  margin: 30px;
+  margin: 20px 30px;
 }
 .post .post-title h1 {
   text-transform: uppercase;
@@ -250,16 +250,16 @@ a:hover, a:active {
 }
 .post .post-title h3 {
   /* text-transform: uppercase; */
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   line-height: 1;
-  font-weight: 600;
+  font-weight: 500;
   color: #464646;
   font-size: 22px;
   margin: 0;
 }
 .post .post-title a {
   text-decoration: none;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
   color: #5f5f5f;
 }
 .post .post-title a:hover {
@@ -283,7 +283,7 @@ a:hover, a:active {
   font-size: 16px;
 }
 .post .post-footer {
-  padding: 0 0 30px 0;
+  padding: 0 0 20px 0;
   border-bottom: 1px solid #f2f2f2;
 }
 .post .post-footer .meta {
