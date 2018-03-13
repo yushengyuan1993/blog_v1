@@ -275,7 +275,12 @@ a:hover, a:active {
 .post .post-title a:hover {
   text-decoration: underline;
 }
-.post .post-content > ul {
+.post .post-content > ul,
+.post .post-content > ol,
+.post .post-content > ul > li> ul,
+.post .post-content > ul > li> ol,
+.post .post-content > ol > li> ul,
+.post .post-content > ol > li> ol {
   padding-left: 30px;
 }
 .post .post-content a {
