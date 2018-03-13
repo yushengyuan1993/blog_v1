@@ -159,7 +159,17 @@ a:hover, a:active {
 .page-top .information .avatar img {
   width: 32px;
   height: 32px;
-  border-radius: 300px;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.page-top .information .avatar img:hover {
+  cursor: pointer;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 .page-top .information .back_btn {
   float: left;
@@ -264,6 +274,9 @@ a:hover, a:active {
 }
 .post .post-title a:hover {
   text-decoration: underline;
+}
+.post .post-content > ul {
+  padding-left: 30px;
 }
 .post .post-content a {
   text-decoration: none;
@@ -731,7 +744,7 @@ a.btn {
 }
 @media only screen and (max-width: 450px) {
   .search .widget .st-default-search-input,.search .st-ui-search-input {
-    width: 76px;
+    width: 72px;
   }
   .fa-chevron-left {
     padding: 0 10px;
