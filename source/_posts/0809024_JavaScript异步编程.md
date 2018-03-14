@@ -124,4 +124,4 @@ fn1().then(fn2).fail(fn3);
 
 > 而且，它还有一个前面三种方法都没有的好处：如果一个任务已经完成，再添加回调函数，该回调函数会立即执行。所以，你不用担心是否错过了某个事件或信号。这种方法的缺点就是编写和理解，都相对比较难。
 
-<p style="text-align: right;">参考文档 [ruanyifeng](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)</p>
+<p style="text-align: right;">`参考文档` [ruanyifeng](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)</p>
