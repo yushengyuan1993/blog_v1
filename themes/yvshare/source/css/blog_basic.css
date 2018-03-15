@@ -46,7 +46,7 @@ pre {
 
 figure.highlight {
   position: relative!important;
-  margin: 1em 0!important;
+  margin: 0.2em 0 1em!important;
   border-radius: 2px!important;
   line-height: 1.1em!important;
   background-color: #f8f8f8!important;
