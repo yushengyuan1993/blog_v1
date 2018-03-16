@@ -8,9 +8,9 @@
   background-color: #f8f8f8
 }
 
-.post-content .tip br {
-  /**display: none**/
-}
+/* .post-content .tip br {
+  display: none
+} */
 
 .post-content .tip:before {
   position: absolute;
