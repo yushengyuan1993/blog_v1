@@ -783,3 +783,6 @@ body::-webkit-scrollbar-thumb, #search_shop::-webkit-scrollbar-thumb{
   line-height: 16px;
   border-radius: 5px;
 }
+#You-Dont-Need-Lodash-Underscore + table {
+  width: initial;
+}
