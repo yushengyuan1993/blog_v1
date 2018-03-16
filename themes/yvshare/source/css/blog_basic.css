@@ -320,8 +320,8 @@ dl dt {
                       background: #f7f7f9;
                       color: #d14;
                       border-radius: 2px; }
-/**
-                      pre {
+
+                      /* pre {
                         -moz-box-sizing: border-box;
                         box-sizing: border-box;
                         margin: 1.6em 0;
@@ -355,7 +355,7 @@ dl dt {
                             font-weight: bold;
                             background: #f4f4f4;
                             border-radius: 4px;
-                            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset; }
+                            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 white inset; } */
 
                             table {
                               -moz-box-sizing: border-box;
@@ -380,7 +380,7 @@ dl dt {
                                     text-align: left; }
 
                                     tr th, tr td {
-                                      padding: 5px 20px;
+                                      padding: 4px 12px;
                                       border-right: 1px solid;
                                       font-size: 1rem; }
 
@@ -392,7 +392,9 @@ dl dt {
 
                                           table tbody > tr:nth-child(odd) > td, table tbody > tr:nth-child(odd) > th {
                                             background-color: #f9f9f9; }
-
+                                            table tbody > tr > td {
+                                              font-size: 13px;
+                                            }
                                             .gist {
                                               font-size: 12px; }
                                               .gist table {
@@ -402,7 +404,7 @@ dl dt {
                                                   font-size: 12px; }
                                                   .gist table .line-numbers {
                                                     font-size: 12px; }
-**/
+
 
 .toc {
   border: 1px solid #f0f0f0;
