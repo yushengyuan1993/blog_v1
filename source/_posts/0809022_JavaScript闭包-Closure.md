@@ -18,7 +18,7 @@ categories:
   - 内部函数可以引用外层的参数和变量
   - 参数和变量不会被垃圾回收机制回收
 
-#### <a>2、如何实现?</a>
+#### <a>2、How to do?</a>
 
 - 一个最简单常见的场景：
   每次点击一个 `li` 元素，打印出该元素对应的索引
@@ -48,3 +48,29 @@ categories:
     }
  	}
   ```
+
+- 看一个更加直白的例子：
+  看看闭包都干了些什么
+  ```js
+  // 执行greeter()后,greeter()闭包内部变量会存在,而闭包内部函数的内部变量不会存在
+  // 使得Javascript的垃圾回收机制 GC 不会收回greeter()所占用的资源
+  // 因为greeter()的内部函数的执行需要依赖greeter()中的变量
+  
+  function greeter() {
+    // Local variable that ends up within closure
+    var str = 'hello';
+    var alertGreet = function() {
+      alert(str);
+    }
+    str = 'hello world';
+    return alertGreet;
+  }
+
+  var alertGreet = greeter();
+  alertGreet()    // hello world
+
+  // 还是上面的例子，如果把 `str = hello world` 和 `return alertGreet` 调换位置，
+  // 最后会弹出 hello 而不是 hello world 了。
+  ```
+
+<p style="text-align: right">参考文档 [github.com](https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions/Questions-and-Answers)</p>

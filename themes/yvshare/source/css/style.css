@@ -111,12 +111,12 @@ a:hover, a:active {
 .content {
   height: auto;
   float: right;
-  width: 60%;
+  width: 68%;
   margin-top: 60px;
 }
 
 .page-top {
-  width: 60%;
+  width: 68%;
   position: fixed;
   right: 0;
   z-index: 3;
@@ -182,7 +182,7 @@ a:hover, a:active {
 }
 
 .sidebar {
-  width: 40%;
+  width: 32%;
   -webkit-background-size: cover;
   background-size: cover;
   background-color: #fff;
@@ -242,7 +242,7 @@ a:hover, a:active {
 
 .post {
   background-color: #FFF;
-  margin: 20px 30px;
+  margin: 20px;
 }
 .post .post-title h1 {
   text-transform: uppercase;
@@ -281,7 +281,7 @@ a:hover, a:active {
 .post .post-content > ul > li> ol,
 .post .post-content > ol > li> ul,
 .post .post-content > ol > li> ol {
-  padding-left: 30px;
+  padding-left: 26px;
 }
 .post .post-content a {
   text-decoration: none;
@@ -785,4 +785,17 @@ body::-webkit-scrollbar-thumb, #search_shop::-webkit-scrollbar-thumb{
 }
 #You-Dont-Need-Lodash-Underscore + table {
   width: initial;
+}
+.toTop {
+  width: 4em;
+  height: 4em;
+  position: fixed;
+  bottom: 3em;
+  right: 2em;
+  z-index: 1000;
+  cursor: pointer;
+  display: none;
+}
+.toTop:hover {
+  
 }
