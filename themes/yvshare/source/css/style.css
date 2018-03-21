@@ -811,14 +811,31 @@ body::-webkit-scrollbar-thumb, #search_shop::-webkit-scrollbar-thumb{
   z-index: 1000;
   cursor: pointer;
   display: none;
-  -webkit-transition: transform 0.8s ease-in-out;
-  -moz-transition: transform 0.8s ease-in-out;
-  -ms-transition: transform 0.8s ease-in-out;
-  transition: transform 0.8s ease-in-out;
 }
 .toTop:hover {
-  -webkit-transform: rotateY(360deg);
-  -moz-transform: rotateY(360deg);
-  -ms-transform: rotateY(360deg);
-  transform: rotateY(360deg);
+  -webkit-animation: toTop 0.3s ease-in 0s infinite alternate;
+  animation: toTop 0.3s ease-in 0s infinite alternate;
+}
+@keyframes toTop
+{
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-0.6em);
+    transform: translateY(-0.6em);
+  }
+}
+ 
+@-webkit-keyframes toTop
+{
+  from {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  to {
+    -webkit-transform: translateY(-0.6em);
+    transform: translateY(-0.6em);
+  }
 }
