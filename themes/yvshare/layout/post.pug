@@ -22,6 +22,7 @@ block content
         a.fa.fa-twitter(href=url_for("http://twitter.com/home?status="+","+config.url+"/"+page.path+","+config.title+","+page.title+",;"))
     - var prev = page.prev ? page.prev.path : false;
     - var next = page.next ? page.next.path : false;
+    //- livere 评论
     //- div(id="lv-container" data-id="city" data-uid="MTAyMC8zNDQ3NC8xMTAxMQ==")
     div#SOHUCS(sid=page.id)
     .pagination

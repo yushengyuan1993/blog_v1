@@ -18,6 +18,9 @@ db.json
 /public/.well-known/
 ssl/
 
+# 第三方代码
+themes/yvshare/source/js/thirdparty.j
+
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
