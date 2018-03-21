@@ -739,7 +739,7 @@ a.btn {
     padding: 0 20px;
   }
 }
-@media screen and (max-width: 960px) and (min-width: 440px) {
+@media screen and (max-width: 1199px) and (min-width: 961px) {
   .search .widget .st-default-search-input,.search .st-ui-search-input {
     width: 120px;
   }
@@ -747,12 +747,28 @@ a.btn {
     padding: 0 20px;
   }
 }
-@media only screen and (max-width: 450px) {
+@media screen and (max-width: 960px) and (min-width: 451px) {
+  .search .widget .st-default-search-input,.search .st-ui-search-input {
+    width: 120px;
+  }
+  .fa-chevron-left {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 450px) and (min-width: 380px) {
   .search .widget .st-default-search-input,.search .st-ui-search-input {
     width: 72px;
   }
   .fa-chevron-left {
     padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 379px) {
+  .search .widget .st-default-search-input,.search .st-ui-search-input {
+    width: 70px;
+  }
+  .fa-chevron-left {
+    padding: 0 8px;
   }
 }
 body::-webkit-scrollbar, #search_shop::-webkit-scrollbar{
@@ -791,11 +807,18 @@ body::-webkit-scrollbar-thumb, #search_shop::-webkit-scrollbar-thumb{
   height: 4em;
   position: fixed;
   bottom: 3em;
-  right: 2em;
+  right: 1em;
   z-index: 1000;
   cursor: pointer;
   display: none;
+  -webkit-transition: transform 0.8s ease-in-out;
+  -moz-transition: transform 0.8s ease-in-out;
+  -ms-transition: transform 0.8s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
 .toTop:hover {
-  
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  transform: rotateY(360deg);
 }

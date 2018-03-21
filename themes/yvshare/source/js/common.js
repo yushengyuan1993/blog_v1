@@ -2,11 +2,11 @@ function GetScrollPosition () {
   var scrollPos = null;
 
   if (window.pageYOffset) {
-    scrollPos = window.pageYOffset
+    scrollPos = window.pageYOffset;
   } else if (document.compatMode && document.compatMode != 'BackCompat') {
-    scrollPos = document.documentElement.scrollTop
+    scrollPos = document.documentElement.scrollTop;
   } else if (document.body) {
-    scrollPos = document.body.scrollTop
+    scrollPos = document.body.scrollTop;
   }
 
   return scrollPos;
@@ -33,6 +33,7 @@ $(document).on('scroll', function () {
   }
 })
 
+// to top
 $('.toTop').click(function () {
   toTop1();
 })
@@ -43,7 +44,7 @@ function toTop1(){
   timer = requestAnimationFrame(function fn() {
     var oTop = document.body.scrollTop || document.documentElement.scrollTop;
     if (oTop > 0) {
-      document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
+      document.body.scrollTop = document.documentElement.scrollTop = oTop - 60;
       timer = requestAnimationFrame(fn);
     } else {
       cancelAnimationFrame(timer);
@@ -57,7 +58,7 @@ function toTop2(){
   timer1 = requestAnimationFrame(function fn() {
     var oTop = document.body.scrollTop || document.documentElement.scrollTop;
     if (oTop > 0) {
-      scrollTo(0,oTop-50);
+      scrollTo(0, oTop-60);
       timer1 = requestAnimationFrame(fn);
     } else {
       cancelAnimationFrame(timer1);
@@ -65,4 +66,9 @@ function toTop2(){
   });
 }
 
+// 基于`layer` 的图片预览
+layer.photos({
+  photos: '.post-content',
+  anim: 4 //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+}); 
 

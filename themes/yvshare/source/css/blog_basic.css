@@ -65,7 +65,7 @@ figure.highlight .gutter {
 }
 
 figure.highlight .code pre {
-  padding: 1.2em 1.4em!important;
+  padding: 0.8em 1em!important;
   line-height: 2em!important;
   margin: 0!important
 }
@@ -380,9 +380,9 @@ dl dt {
                                     text-align: left; }
 
                                     tr th, tr td {
-                                      padding: 4px 12px;
+                                      padding: 3px 12px;
                                       border-right: 1px solid;
-                                      font-size: 1rem; }
+                                      font-size: 0.8rem; }
 
                                       tr th:last-child, tr td:last-child {
                                         border-right: 0px; }
