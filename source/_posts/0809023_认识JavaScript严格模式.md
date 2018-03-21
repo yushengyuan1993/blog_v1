@@ -11,6 +11,7 @@ categories:
 <a href="#why">2. 为什么使用严格模式</a>
 <a href="#ctrl">3. 严格模式的限制</a>
 <a href="#key">4. 保留关键字</a>
+<a href="regulation">5. 严格模式下的规则</a>
 
 #### <a name="whatIs">1、关于严格模式</a>
 
@@ -156,3 +157,21 @@ f();    // 报错，this未定义
   - public
   - static
   - yield
+
+#### <a name="#regulation">5、严格模式下的规则</a>
+
+- 变量不能未声明就使用
+- 函数参数必须有唯一的名称 （否则会被认为是语法错误）
+- `with` 语句被禁止使用
+- 赋值给只读属性会抛出一个错误
+- 像 `00840` 这样的八进制数是语法错误
+- 尝试 `delete` 不可删除的数据会抛出一个错误
+- `delete prop` 被认为是语法错误, 只能删除属性 `delete global[prop]`
+- `eval` 不会引入新的变量到它的作用域
+- `eval` 和 `arguments` 的绑定不会被改变
+- `arguments` 不会神奇地跟踪方法参数的变化
+- 不再支持 `arguments.callee`，使用它会抛出 `TypeError`
+- 不再支持 `arguments.caller`，使用它会抛出 `TypeError`
+- 上下文作为 `this` 在方法调用时不会被强制包装成一个 `Object`（即 `this` 不会指向全局对象）
+- 不再能够使用 `fn.caller` 和 `fn.arguments` 访问 `JavaScript` 的堆栈
+- 保留字(例如 `protected`, `static`, `interface`等等)不能被作为新变量声明 <a href="#key">保留关键字</a>

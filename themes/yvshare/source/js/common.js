@@ -1,3 +1,20 @@
+/*
+* Scrolline.js - Create an indication bar line of scroll position
+* Basic usage : $.scrolline();
+* ---
+* Version: 1.0
+* Copyright 2014, Anthony Ly (http://anthonyly.com)
+* Released under the MIT Licence
+*/
+(function(c,b,a,d){c.extend({scrolline:function(f){var g={backColor:"#ecf0f1",direction:"horizontal",frontColor:"#2ecc71",opacity:1,position:"top",reverse:false,weight:5,zindex:10,scrollEnd:function(){}};function e(h){this.params=c.extend(g,h);this.$back=c(a.createElement("div"));this.$front=c(a.createElement("div"));this.init()}e.prototype={init:function(){var r=this,n,q,j,k,p,i,o,m,l,h;if(r.params.direction!="vertical"){r.params.direction="horizontal"}if(r.params.direction=="vertical"&&r.params.position!="right"){r.params.position="left"}if(r.params.direction=="horizontal"&&r.params.position!="bottom"){r.params.position="top"}if(r.params.direction=="vertical"){j=n=0;if(r.params.position=="right"){q=0;k="auto"}else{q="auto";k=0}}else{q=k=0;if(r.params.position=="bottom"){n="auto";j=0}else{n=0;j="auto"}}if(r.params.reverse&&r.params.reverse===true){if(r.params.direction=="vertical"){m=o=l=0;i="auto"}else{m=o=o=0;l="auto"}}else{i=l=0;m=o="auto"}r.$front.css({background:r.params.frontColor,bottom:m,height:0,left:l,margin:0,overflow:"hidden",padding:0,position:"absolute",right:o,top:i,width:0}).appendTo(r.$back);r.$back.css({background:r.params.backColor,bottom:j,height:0,left:k,opacity:r.params.opacity,margin:0,overflow:"hidden",position:"fixed",padding:0,right:q,top:n,width:0,zIndex:r.params.zindex,}).appendTo("body");c(b).on("load resize scroll orientationchange",function(){r.scrollListener()})},scrollListener:function(){var r=this,m=c(b).height(),n=c(b).width(),o=c(a).height(),h=c(b).scrollTop(),l,p,j,q,k,i;if(r.params.direction=="vertical"){k=(h+m)*m/o;l=r.params.weight;p=i=m;j=r.params.weight;q=k}else{k=(h+m)*n/o;l=i=n;p=r.params.weight;j=k;q=r.params.weight}r.$back.css({height:p,width:l});r.$front.css({height:q,width:j});if(k>=i){r.params.scrollEnd()}}};new e(f)}})})(jQuery,window,document);
+$.scrolline({
+  weight: 3,
+  frontColor: '#01ACED',
+  backColor: '#fff'
+});
+/*
+* code
+*/
 function GetScrollPosition () {
   var scrollPos = null;
 
