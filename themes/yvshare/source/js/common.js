@@ -61,7 +61,7 @@ function toTop1(){
   timer = requestAnimationFrame(function fn() {
     var oTop = document.body.scrollTop || document.documentElement.scrollTop;
     if (oTop > 0) {
-      document.body.scrollTop = document.documentElement.scrollTop = oTop - 60;
+      document.body.scrollTop = document.documentElement.scrollTop = oTop - 100;
       timer = requestAnimationFrame(fn);
     } else {
       cancelAnimationFrame(timer);
@@ -75,7 +75,7 @@ function toTop2(){
   timer1 = requestAnimationFrame(function fn() {
     var oTop = document.body.scrollTop || document.documentElement.scrollTop;
     if (oTop > 0) {
-      scrollTo(0, oTop-60);
+      scrollTo(0, oTop-100);
       timer1 = requestAnimationFrame(fn);
     } else {
       cancelAnimationFrame(timer1);

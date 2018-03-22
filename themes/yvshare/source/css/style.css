@@ -301,7 +301,7 @@ a:hover, a:active {
   font-size: 16px;
 }
 .post .post-footer {
-  padding: 0 0 20px 0;
+  padding: 0 0 1em 0;
   border-bottom: 1px solid #f2f2f2;
 }
 .post .post-footer .meta {
@@ -351,17 +351,14 @@ a:hover, a:active {
 .post .post-footer .tags a:hover {
   text-decoration: none;
 }
-
 .pagination {
-  margin: 30px;
-  padding: 0px 0 56px 0;
+  margin: 2em 5em;;
   /* border-bottom: 1px solid #f2f2f2; */
 }
 .pagination ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  height: 13px;
 }
 .pagination ul li {
   margin: 0 2px 0 2px;
@@ -402,7 +399,11 @@ a:hover, a:active {
   margin: 30px;
   border-bottom: 1px solid #f2f2f2;
 }
-
+.clearfix:after{
+  content: "";
+  display: block;
+  clear: both;
+}
 .footer {
   clear: both;
   text-align: center;
