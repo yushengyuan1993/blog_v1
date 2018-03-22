@@ -19,7 +19,7 @@ db.json
 ssl/
 
 # 第三方代码
-themes/yvshare/source/js/thirdparty.js
+./themes/yvshare/source/js/thirdparty.js
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important

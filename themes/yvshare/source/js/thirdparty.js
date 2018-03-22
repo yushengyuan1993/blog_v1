@@ -12,10 +12,10 @@
 // })(document, 'script');
 
 // 畅言评论
-// window.changyan.api.config({
-// appid: 'cytv4GF1v',
-// conf: 'prod_4451f901aa35e62d1bad39eb826dbb4a'
-// });
+window.changyan.api.config({
+  appid: 'cytv4GF1v',
+  conf: 'prod_4451f901aa35e62d1bad39eb826dbb4a'
+});
 
 // swiftype 搜索系统
 (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
