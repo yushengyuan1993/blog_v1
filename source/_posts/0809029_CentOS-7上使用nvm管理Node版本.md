@@ -1,7 +1,7 @@
 ---
 id: 0809029
 title: CentOS 7上使用nvm管理Node版本
-date: 2018-03-21 11:15:22
+date: 2018-01-10 11:15:22
 tags:
   - Node.js
   - nvm

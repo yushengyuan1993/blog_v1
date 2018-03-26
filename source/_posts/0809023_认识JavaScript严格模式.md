@@ -1,7 +1,7 @@
 ---
 id: 0809023
 title: 认识 JavaScript 严格模式
-date: 2018-03-09 16:17:23
+date: 2016-12-19 16:17:23
 tags:
   - JavaScript
 categories:
