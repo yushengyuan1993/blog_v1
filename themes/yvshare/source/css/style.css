@@ -112,7 +112,7 @@ a:hover, a:active {
   height: auto;
   float: right;
   width: 68%;
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .page-top {
@@ -708,7 +708,7 @@ a.btn {
   }
 
   .content {
-    margin-top: 350px;
+    margin-top: 300px;
     width: 100%;
     z-index: 2;
     position: absolute;
@@ -734,7 +734,7 @@ a.btn {
 
 @media only screen and (min-width: 1200px) {
   .search .widget .st-default-search-input,.search .st-ui-search-input {
-    width: 190px;
+    width: 300px;
   }
   .fa-chevron-left {
     padding: 0 20px;
@@ -742,29 +742,29 @@ a.btn {
 }
 @media screen and (max-width: 1199px) and (min-width: 961px) {
   .search .widget .st-default-search-input,.search .st-ui-search-input {
-    width: 120px;
+    width: 240px;
   }
   .fa-chevron-left {
     padding: 0 20px;
   }
 }
-@media screen and (max-width: 960px) and (min-width: 451px) {
+@media screen and (max-width: 960px) and (min-width: 501px) {
   .search .widget .st-default-search-input,.search .st-ui-search-input {
-    width: 120px;
+    width: 220px;
   }
   .fa-chevron-left {
     padding: 0 20px;
   }
 }
-@media screen and (max-width: 450px) and (min-width: 380px) {
+@media screen and (max-width: 500px) and (min-width: 401px) {
   .search .widget .st-default-search-input,.search .st-ui-search-input {
-    width: 72px;
+    width: 120px;
   }
   .fa-chevron-left {
     padding: 0 10px;
   }
 }
-@media only screen and (max-width: 379px) {
+@media only screen and (max-width: 400px) {
   .search .widget .st-default-search-input,.search .st-ui-search-input {
     width: 70px;
   }
@@ -840,3 +840,31 @@ body::-webkit-scrollbar-thumb, #search_shop::-webkit-scrollbar-thumb{
     transform: translateY(-0.6em);
   }
 }
+
+/* eyes */
+/* .move-area{
+  width: 100vw;
+  height: 100vh;
+  padding: 10% 45%;
+}
+.container {
+  width: 100%;
+  text-align: center;
+}
+.eye {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background: #CCC;
+}
+.eye:after {
+  position: absolute;
+  bottom: 17px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  content: "";
+} */
