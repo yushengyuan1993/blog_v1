@@ -15,11 +15,18 @@
         a.current(href="/archives")= __('Archive')
       else
         a(href="/archives")= __('Archive')
+    //- 标签
     li
       if is_current('tags')
         a.current(href="/tags")= __('Tags')
       else
         a(href="/tags")= __('Tags')
+    //- 分类
+    //- li
+    //-   if is_current('categories')
+    //-     a.current(href="/categories")= __('Categories')
+    //-   else
+    //-     a(href="/categories")= __('Categories')
 
   .information
     .back_btn
