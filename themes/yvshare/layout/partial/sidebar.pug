@@ -5,10 +5,17 @@
         img(src= url_for('images/logo@2x.png'),style="width:328px;")
       //- h3(title="")
       //-   a(href="/")= config.title
-      if theme.description
-        .description
-          p= theme.description
-
+      //- if theme.description
+      //-   .description
+      //-     p= theme.description
+  //- div.move-area
+    div.container
+      div.eye
+        a(href="https://twitter.com/" + theme.twitter)
+          i.fa.fa-twitter
+      div.eye
+        a(href="https://github.com/" + theme.github)
+          i.fa.fa-github
   ul.social-links
     //- li
       a(href="http://github.com/yushengyuan1993")
@@ -17,19 +24,19 @@
       li
         a(href="https://twitter.com/" + theme.twitter)
           i.fa.fa-twitter
-    if theme.instagram
+    //- if theme.instagram
       li
         a(href="http://instagram.com/" + theme.instagram)
           i.fa.fa-instagram
-    if theme.rss
+    //- if theme.rss
       li
         a(href= url_for(theme.rss))
           i.fa.fa-rss
-    if theme.weibo
+    //- if theme.weibo
       li
         a(href="http://weibo.com/" + theme.weibo)
           i.fa.fa-weibo
-    if theme.facebook
+    //- if theme.facebook
       li
         a(href="http://facebook.com/" + theme.facebook)
           i.fa.fa-facebook
