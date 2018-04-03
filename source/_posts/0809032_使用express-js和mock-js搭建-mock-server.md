@@ -74,7 +74,7 @@ categories:
   $ npm install mockjs --save-dev
   ```
 
-2. 使用 `mock.js`，创建接口路由，在 `routes/` 目录下创建一个 `mock.js` 文件：
+2. 使用 `mock.js`，创建路由接口，在 `routes/` 目录下创建一个 `mock.js` 文件：
   ```js
   var express = require('express');
   var router = express.Router();
@@ -111,3 +111,32 @@ categories:
 
   module.exports = router;
   ```
+
+3. 挂载路由接口，在根目录的 `app.js` 文件中添加：
+  ```js
+  ...
+
+  // mock.js
+  var mockApi = require('./routes/mock');
+
+  ...
+
+  // mockjs
+  app.use('/api', mockApi);
+  ...
+  ```
+
+4. 小功告成，这时再启动服务：
+  ```sh
+  $ DEBUG=mock-server:* npm start
+
+  > mock-server@0.0.0 start D:\START\files\mock-server
+  > node ./bin/www
+
+  Tue, 03 Apr 2018 03:25:17 GMT mock-server:server Listening on port 3000
+
+  # 访问 localhost:3000/api 就会得到相应的接口数据
+
+  ```
+
+5. 更多 `mock.js` 配置请 [查看更多](https://github.com/nuysoft/Mock/wiki)
